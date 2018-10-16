@@ -1,0 +1,301 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+                <section>
+                   <h3 style="color:yellow;">Report</h3>
+                   <h2>Capstone Final Assignment</h2>
+                   <p>
+                      <small style="color:yellow;">Created by  Carlos Wilfredo Alayon </small>
+                   </p>
+                </section>
+				<section>
+                    <h4 style="color:yellow;"> Description of the problem</h4>
+                         <small>
+                            <ul>
+                                <li>Our client want to start a Venezuelan fast food restaurant in Toronto,
+                                            Canada.</li>
+                                <li>It will be a restaurant specialized in "arepas" that is a food of the
+                                        traditional gastronomy of Venezuela and its neighboring country Colombia.</li>
+                                <li>Arepas are are made based on ground corn flour. They are circular and flattened
+                                        and once cooked, on a metal plate, filled with meat, chicken, cheese, ham, pork
+                                        and many other things. </li>
+                                <li>Venezuelan arepas restaurants have proliferated in recent years in South America
+                                        and now also in Europe, the United States and Canada. </li>
+                                <li>Our client want to know if Toronto would be a good place to start their arepas restaurant
+                                        and what would be a good location for his business in that city.</li>
+                            </ul>
+                        </small>
+                    <p> </p>   
+                    <p> </p>
+                </section>
+                <section>
+                <h4 style="color:yellow;">Description and use of Data</h4>
+                        <small> 
+                            <ul>
+                                <li>The restaurant is designed for all public, but it is reasonable to think that
+                                Venezuelan residents in the city would be the restaurant's main clients, at least at
+                                the beginning of the business.</li>
+                                <li> So we obtained data from the estimate of
+                                 Venezuelans living in Toronto and theor the immigration figures of Venezuelans in
+                                 recent years to this city in the last 10 years.</li>
+                            </ul>
+                             
+                        </small>
+                    <p>
+                        <small>
+                        </small>
+                    </p> 
+
+                </section>
+                
+                <section>
+                    <small style="color:yellow;">Venezuelan Inmigration and residence in Toronto</small>
+                    
+                    <img data-src="img/veninmigra.png" width="600" height="600">
+                    
+                </section>
+                
+                <section>
+                    <h4 style="color:yellow;"> Metodology</h4>
+                    
+                        <small> 
+                            <p>
+                                    <h4 style="color:yellow;"> Data Collection and Preproccesing </h4>
+                                <ol>
+                                        <li>Data Collection about Venezuelan inmigration to Toronto, Canada</li>
+                                        <li>Get List of postal codes of Canada</li>
+                                        <li>Add column headers, cells cleaning, data merging and grouping by Boroughs</li>
+                                 </ol>
+                            </p>
+
+
+                            <p>
+                                <h4 style="color:yellow;"> Using the Foursquare API to explore the neighborhoods and segment them</h4>
+                                <ol>
+                                    <li>Explore venues in neighborhoods in Toronto</li>
+                                    <li>Analyze venues in each Neighborhood</li>
+                                    <li>Group rows by neighborhood, taking the mean of the frequency of occurrence of each category</li>
+                                    <li>Represent each neighborhood along with the top 5 most common venues</li>
+                                </ol>
+                            </p>
+                            <p>
+                                <h4 style="color:yellow;"> Cluster Neighborhoods</h4>
+                                    <ol>
+                                    <li>Run k-means to cluster the neighborhood into 5 clusters</li>
+                                    <li>Create a new dataframe that includes the cluster and the top 10 venues for each neighborhood</li>
+                                    <li>Examine Clusters</li>
+                                </ol>
+                            </p>
+                            
+                        </small>
+                
+                </section>
+                <section>
+                
+                        <h4 style="color:yellow;"> Metodology</h4>
+                              <small> 
+                                  
+                                  <h4 style="color:yellow;"> Analyse Cluster Neighborhoods of food venues </h4>
+                              <ol>
+                                  <li>Examine Clusters with only food venues</li>
+                                  <li>Analyze venues in each Neighborhood</li>
+                                  <li>Group rows by neighborhood, the mean of the frequency of occurrence of each category</li>
+                                  <li>Visualize each neighborhood along with the top 5 most common venues</li>
+                              </ol>
+                              <p></p>
+                              <p>
+                              <h4 style="color:yellow;"> Let's Cluster Neighborhoods of food venues</h4>
+                               <ol>
+                                  <li>Run k-means to cluster the neighborhood into 5 clusters</li>
+                                  <li>Create a new dataframe the clusters and the top 10 venues for each neighborhood</li>
+                                  <li>Group rows by neighborhood, taking the mean of the frequency of occurrence of each category</li>
+                                  <li>Visualize the resulting clusters</li>
+                               </ol>
+                              </p>
+  
+                              <p></p>
+                              </small>
+                          
+                        </p> <p>     
+
+                </section>
+                
+                <section>
+                    <small>
+                            <h4 style="color:yellow;"> Using the Foursquare API to explore the neighborhoods in Toronto and segment them
+                                    The following venues were found </h4> 
+                     <p>
+                        The Beaches
+                        The Danforth West,Riverdale
+                        The Beaches West, India Bazaar
+                        Studio District
+                        Lawrence Park
+                        Davisville North
+                        North Toronto West
+                        Davisville
+                        Moore Park, Summerhill East
+                        Deer Park, Forest Hill SE, Rathnelly, South Hill, Summerhill West
+                        Rosedale
+                        Cabbagetown, St. James Town
+                        Church and Wellesley
+                        Harbourfront, Regent Park
+                        Ryerson, Garden District
+                        St. James Town
+                        Berczy Park
+                        Central Bay Street
+                        Adelaide, King, Richmond
+                        Harbourfront East, Toronto Islands, Union Station
+                        Design Exchange, Toronto Dominion Centre
+                        Commerce Court, Victoria Hotel
+                        Roselawn
+                        Forest Hill North, Forest Hill West
+                        The Annex, North Midtown, Yorkville
+                        Harbord, University of Toronto
+                        Chinatown, Grange Park, Kensington Market
+                        CN Tower, Bathurst Quay, Island airport, Harbourfront West, King and Spadina, Railway Lands, South Niagara
+                        Stn A PO Boxes 25 The Esplanade
+                        First Canadian Place, Underground city
+                        Christie
+                        Dovercourt Village, Dufferin
+                        Little Portugal, Trinity
+                        Brockton, Exhibition Place, Parkdale Village
+                        High Park, The Junction South
+                        Parkdale, Roncesvalles
+                        Runnymede, Swansea
+                    </p>
+                    </small>
+                       
+                        
+                </section>
+                
+                <section> 
+                    <small style="color:yellow;">Analysis of Toronto Neighborhoods and Venues</small>
+                    <img data-src="img/tablas3y4.png" width="600" height="600">
+                </section>
+                <section>
+                        <small style="color:yellow;">Analysis of Toronto Venues and Clusters</small>
+                        <img data-src="img/tabla5.png" width="600" height="600">
+                </section>
+                <section> 
+                    <p><small style="color:yellow;">Toronto Clusters</small></p>
+                    <img data-src="img/clusters.png" width="800" height="500">
+                </section>
+                
+                <section>    
+                    <small style="color:yellow;">Analysis of Toronto Neighborhoods and Clusters</small>
+                    <img data-src="img/tablas7y8.png" width="600" height="600">
+                </section>
+
+                <section>
+                        <h4 style="color:yellow;"> Results Analysis</h4>
+                        <small><h4 style="color:yellow;"> a. Customer Analysis </h4></small>
+                      
+                        <small>
+                            It is expected that potential customers for the business that starts, be Venezuelan
+                                and Latin American. Although we do not have the data of distribution of them in the
+                                different neighborhoods, we know from the data of Census Profile, 2016 Census Toronto,
+                                City, Ontario, Canada, in that country there is a significant population of Latin
+                                Americans and particularly of Venezuelans. Venezuela is among the top 10 countries 
+                                in the Americas with the largest presence of immigrants in Toronto. Please see
+                                tables 1 and 2 at the beginning of the notebook.
+                        </small>
+                       <p>
+                        </p>
+                        
+                </section>
+                <section>
+
+                        <h4 style="color:yellow;"> Results Analysis</h4>
+                        <small><h4 style="color:yellow;"> b. Competitors Analysis </h4></small>
+                      
+                        <small>
+                            So our strategy was be to select a cluster, with a number of complementary restaurant options.
+                            Fousquare only reported 1 arepa stablishment, located in the vicinity of Chinatown, Grange Park,
+                            Kensington Market. So, here is also the recommendation of the location of our client's restaurant
+                            in Downtown Toronto. This would correspond to Downtown Toronto, in cluster No. 2.
+                        </small>
+                        <img data-src="img/arepera.png" width="900" height="200">
+                       <p>   </p>
+                        
+                </section>
+                <section>
+
+                        <h4 style="color:yellow;"> Results Analysis</h4>
+                        <small><h4 style="color:yellow;"> b. Venues Analysis </h4></small>
+                      
+                        <small>
+                                An important aspect is foot traffic because it represents the flow of people who could potentially
+                                walk around your restaurant. It would be advisable to be close to a subway station for example.
+                        </small>
+                        <img data-src="img/subway.png" width="700" height="200">
+                        <small>
+                                As we determined that the ideal location of the establishment is in the Downtown, and we also suggest
+                                that it be close to a subway station, then we could select from the following Neighborhoods:
+                                Cabbagetown, St. James Town, Harbourfront, or Regent Park.
+                        </small>
+                       <p>  </p>
+                        
+                </section>
+                <section>
+
+                        <h4 style="color:yellow;"> Conclusions</h4>
+
+                        <small>
+                                In principle the project is feasible and it is expected that it will have enough Venezuelan and Latin
+                                 American potential clients in Toronto, to start according to the official census of Canada. According
+                                 to the results, the recommended location for the arepas restaurant is in the Toronto Downtownr, where
+                                 we could locate only a similar business selling arepas. We also suggest that the business be close to
+                                 a subway station to make it easier for foot traffic of customers to the restaurant.
+                        </small>
+                        
+                </section>                        
+                       <p>
+                        </p>
+                        
+                </section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+                transition: 'convex', // none/fade/slide/convex/concave/zoom
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
